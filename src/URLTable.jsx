@@ -12,7 +12,7 @@ function URLTable() {
 
     const fetchURLs = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/geturl');
+            const response = await axios.get('https://url-shortener-backend-l2je.onrender.com/geturl');
             setUrls(response.data);
             console.log(response.data)
         } catch (error) {

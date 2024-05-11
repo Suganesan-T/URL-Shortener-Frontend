@@ -14,7 +14,7 @@ function Dashboard() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/createshorturl', { longurl })
+        axios.post('https://url-shortener-backend-l2je.onrender.com/createshorturl', { longurl })
             .then(response => {
                 console.log(response)
                 const newShortUrl = response.data.shorturl;

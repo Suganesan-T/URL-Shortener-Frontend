@@ -2,7 +2,7 @@
 import axios from "axios";
 
 //define base url for API
-const BASEURL = "http://localhost:4000";
+const BASEURL = "https://url-shortener-backend-l2je.onrender.com";
 
 //create axios instance
 const instance = axios.create({

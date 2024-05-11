@@ -11,7 +11,7 @@ function Activated() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(token)
-        axios.get(`http://localhost:4000/activatelink/${token}`)
+        axios.get(`https://url-shortener-backend-l2je.onrender.com/${token}`)
         .then(responce => {
             alert(responce.data.message)
     

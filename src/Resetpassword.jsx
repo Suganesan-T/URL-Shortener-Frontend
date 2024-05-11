@@ -24,7 +24,7 @@ function Resetpassword() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(randomString)
-        axios.put(`http://localhost:4000/changePassword/${randomString}`, { Password })
+        axios.put(`https://url-shortener-backend-l2je.onrender.com/changePassword/${randomString}`, { Password })
         .then(responce => {
             alert(responce.data.message)
     
