@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import { Link } from 'react-router-dom'
-
+import imageSrc from './Image/image.png'
 function Home() {
     return (
         <div>
@@ -16,7 +16,7 @@ function Home() {
                 </div>
                 <div className="overflow-hidden" style={{ maxHeight: "30vh" }}>
                     <div className="container px-5">
-                        <img src="imgage.png" className="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy" />
+                        <img src={imageSrc} className="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy" />
                     </div>
                 </div>
             </div>
