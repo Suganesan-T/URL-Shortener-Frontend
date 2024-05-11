@@ -39,12 +39,12 @@ export default function Signin() {
 
     const navigate = useNavigate()
 
-    const [Email, setEmail] = useState("")
-    const [Password, setPassword] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        userService.login(Email, Password)
+        userService.login(email, password)
             .then(responce => {
                 alert(responce.data.message)
 
@@ -105,7 +105,7 @@ export default function Signin() {
                                 name="Email"
                                 autoComplete="Email"
                                 autoFocus
-                                value={Email}
+                                value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             <TextField
@@ -117,7 +117,7 @@ export default function Signin() {
                                 type="Password"
                                 id="Password"
                                 autoComplete="current-password"
-                                value={Password} 
+                                value={password} 
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                             <FormControlLabel

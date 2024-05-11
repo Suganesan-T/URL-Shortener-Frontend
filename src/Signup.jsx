@@ -29,14 +29,14 @@ export default function Signup() {
 
   const navigate = useNavigate()
 
-  const [Email, setEmail] = useState("")
-  const [Password, setPassword] = useState("")
-  const [Firstname, setFirstname] = useState("")
-  const [Lastname, setLastname] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [firstname, setFirstname] = useState("")
+  const [lastname, setLastname] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    userService.register(Firstname, Lastname, Email, Password)
+    userService.register(firstname, lastname, email, password)
       .then(responce => {
         alert(responce.data.message)
 
@@ -77,13 +77,13 @@ export default function Signup() {
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
-                  name="FirstName"
+                  name="firstName"
                   required
                   fullWidth
-                  id="FirstName"
+                  id="firstName"
                   label="First Name"
                   autoFocus
-                  value={Firstname}
+                  value={firstname}
                   onChange={(e) => setFirstname(e.target.value)}
                 />
               </Grid>
@@ -91,11 +91,11 @@ export default function Signup() {
                 <TextField
                   required
                   fullWidth
-                  id="LastName"
+                  id="lastName"
                   label="Last Name"
-                  name="LastName"
+                  name="lastName"
                   autoComplete="family-name"
-                  value={Lastname}
+                  value={lastname}
                   onChange={(e) => setLastname(e.target.value)}
                 />
               </Grid>
@@ -103,11 +103,11 @@ export default function Signup() {
                 <TextField
                   required
                   fullWidth
-                  id="Email"
+                  id="email"
                   label="Email Address"
-                  name="Email"
-                  autoComplete="Email"
-                  value={Email}
+                  name="email"
+                  autoComplete="email"
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </Grid>
@@ -115,12 +115,12 @@ export default function Signup() {
                 <TextField
                   required
                   fullWidth
-                  name="Password"
+                  name="password"
                   label="Password"
-                  type="Password"
-                  id="Password"
+                  type="password"
+                  id="password"
                   autoComplete="new-password"
-                  value={Password}
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Grid>

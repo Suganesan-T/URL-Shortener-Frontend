@@ -3,24 +3,24 @@ import { instance, protectInstance } from "./instance";
 //define the user service
 const userService = {
     //register a user
-    register: async(Firstname,Lastname,Email,Password)=>{
+    register: async(firstname,lastname,email,password)=>{
         //make a post request to the register enpoints
         return await instance.post('/signup', 
         {
-            FirstName:Firstname, 
-            LastName: Lastname,
-            Email: Email,
-            Password:Password
+            FirstName:firstname, 
+            LastName: lastname,
+            Email: email,
+            Password:password
             
         });
         
     },
-    login: async(Email, Password)=>{
+    login: async(email, password)=>{
         //make a post request to the login enpoints
         return await instance.post('/login',
         {
-            Email: Email,
-            Password:Password
+            Email: email,
+            Password:password
         })
     },
     createUrl: async(long)=>{
@@ -29,11 +29,11 @@ const userService = {
             long:long
         })
     },
-    forgetPassword: async(Email)=>{
+    forgetPassword: async(email)=>{
         //make a post request to the forget password enpoints
         return await instance.post('/forgetPassword',
         {
-            Email: Email
+            Email: email
         })
     },
 }

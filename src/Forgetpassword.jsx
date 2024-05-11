@@ -18,11 +18,11 @@ const defaultTheme = createTheme();
 
 function Forgetpassword() {
 
-  const [Email,setEmail] = useState("")
+  const [email,setEmail] = useState("")
 
     const handleForgetPassword = (e) => {
         e.preventDefault()
-        userService.forgetPassword(Email)
+        userService.forgetPassword(email)
         .then(responce => {
             console.log(responce)
             alert(responce.data.message)
@@ -61,10 +61,10 @@ function Forgetpassword() {
                 fullWidth
                 id="email"
                 label="Email Address"
-                name="Email"
-                autoComplete="Email"
+                name="email"
+                autoComplete="email"
                 sx={{ width: '100%', height: '50px' }}
-                value={Email} 
+                value={email} 
                 onChange={(e) => setEmail(e.target.value)} 
               />
             </Grid>
