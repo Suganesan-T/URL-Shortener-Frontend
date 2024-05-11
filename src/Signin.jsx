@@ -39,12 +39,12 @@ export default function Signin() {
 
     const navigate = useNavigate()
 
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const [Email, setEmail] = useState("")
+    const [Password, setPassword] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        userService.login(email, password)
+        userService.login(Email, Password)
             .then(responce => {
                 alert(responce.data.message)
 
@@ -100,24 +100,24 @@ export default function Signin() {
                                 margin="normal"
                                 required
                                 fullWidth
-                                id="email"
+                                id="Email"
                                 label="Email Address"
-                                name="email"
-                                autoComplete="email"
+                                name="Email"
+                                autoComplete="Email"
                                 autoFocus
-                                value={email}
+                                value={Email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             <TextField
                                 margin="normal"
                                 required
                                 fullWidth
-                                name="password"
+                                name="Password"
                                 label="Password"
-                                type="password"
-                                id="password"
+                                type="Password"
+                                id="Password"
                                 autoComplete="current-password"
-                                value={password} 
+                                value={Password} 
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                             <FormControlLabel
